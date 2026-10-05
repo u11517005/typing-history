@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英打遊戲開發歷程</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { margin-bottom: 30px; color: #333; }
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 24px;
+            width: 260px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card h2 { margin-top: 0; color: #2c3e50; }
+        .card p { color: #666; font-size: 14px; line-height: 1.5; }
+        .card a {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .card a.coming { background-color: #6c757d; }
+        .card a:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <h1>英打遊戲開發歷程網站</h1>
+
+    <div class="container">
+        <!-- 版本一卡片 -->
+        <div class="card">
+            <div>
+                <h2>版本一</h2>
+                <p>基礎畫面與無作用的開始按鈕。</p>
+            </div>
+            <a href="https://u11517005.github.io/typing-v1/" target="_blank">前往版本一</a>
+        </div>
+
+        <!-- 版本二卡片 -->
+        <div class="card">
+            <div>
+                <h2>版本二</h2>
+                <p>包含英文鍵盤圖片與按按鈕播放雙嗶聲功能。</p>
+            </div>
+            <a href="https://u11517005.github.io/typing-v2/" target="_blank">前往版本二</a>
+        </div>
+
+        <!-- 版本三卡片 (連結到同資料夾的 coming-soon.html) -->
+        <div class="card">
+            <div>
+                <h2>版本三</h2>
+                <p>左手 ASDF 鍵盤英打實戰練習。</p>
+            </div>
+            <a href="coming-soon.html" class="coming">Coming Soon</a>
+        </div>
+    </div>
+
+</body>
+</html>
