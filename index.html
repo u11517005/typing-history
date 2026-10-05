@@ -5,50 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英打遊戲開發歷程</title>
     <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --card-bg: #fffdf9;
+            --primary-accent: #e67e22;
+            --text-main: #4a3b32;
+            --text-sub: #7a685d;
+            --border-color: #f3e9d8;
+            --btn-bg: #78a55a;
+            --btn-hover: #68934c;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            padding: 40px 20px;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            padding: 60px 20px;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#f0e6d2 1px, transparent 1px);
+            background-size: 20px 20px;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            color: var(--text-main);
         }
-        h1 { margin-bottom: 30px; color: #333; }
+
+        h1 {
+            margin-bottom: 40px;
+            color: var(--text-main);
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-align: center;
+        }
+
         .container {
             display: flex;
-            gap: 20px;
-            max-width: 900px;
+            gap: 24px;
+            max-width: 960px;
             width: 100%;
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 24px;
-            width: 260px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 28px;
+            width: 280px;
+            box-shadow: 0 10px 25px rgba(180, 150, 120, 0.12);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
         }
-        .card h2 { margin-top: 0; color: #2c3e50; }
-        .card p { color: #666; font-size: 14px; line-height: 1.5; }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 32px rgba(180, 150, 120, 0.2);
+            border-color: #e6d7c3;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--text-main);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--text-sub);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
         .card a {
             display: block;
             text-align: center;
-            padding: 10px;
-            background-color: #28a745;
+            padding: 12px;
+            background: var(--btn-bg);
             color: white;
             text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-top: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            margin-top: 24px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 0 #5f8446;
         }
-        .card a.coming { background-color: #6c757d; }
-        .card a:hover { opacity: 0.9; }
+
+        .card a:hover {
+            background: var(--btn-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #5f8446;
+        }
+
+        .card a:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #5f8446;
+        }
     </style>
 </head>
 <body>
@@ -60,27 +120,27 @@
         <div class="card">
             <div>
                 <h2>版本一</h2>
-                <p>基礎畫面與無作用的開始按鈕。</p>
+                <p>基礎畫面與沒有互動效果的開始按鈕預告。</p>
             </div>
-            <a href="https://u11517005.github.io/typing-v1/" target="_blank">前往版本一</a>
+            <a href="https://u11517005.github.io/typing-v1/" target="_blank">前往版本一 ↗</a>
         </div>
 
         <!-- 版本二卡片 -->
         <div class="card">
             <div>
                 <h2>版本二</h2>
-                <p>包含英文鍵盤圖片與按按鈕播放雙嗶聲功能。</p>
+                <p>導入英文鍵盤圖片與音效資材，點擊按鈕觸發雙嗶聲。</p>
             </div>
-            <a href="https://u11517005.github.io/typing-v2/" target="_blank">前往版本二</a>
+            <a href="https://u11517005.github.io/typing-v2/" target="_blank">前往版本二 ↗</a>
         </div>
 
-        <!-- 版本三卡片 (連結到同資料夾的 coming-soon.html) -->
+        <!-- 版本三卡片 -->
         <div class="card">
             <div>
                 <h2>版本三</h2>
-                <p>左手 ASDF 鍵盤英打實戰練習。</p>
+                <p>正式互動功能：左手 ASDF 鍵盤英打動態練習。</p>
             </div>
-            <a href="coming-soon.html" class="coming">Coming Soon</a>
+            <a href="v3/index.html">進入版本三 →</a>
         </div>
     </div>
 
